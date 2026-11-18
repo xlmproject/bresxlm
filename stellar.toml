@@ -1,0 +1,29 @@
+# Bres — Stellar asset information
+# SEP-0001 (stellar.toml) manifest. Public manifest endpoint:
+# https://bresxlm.pages.dev/.well-known/stellar.toml
+#
+# IMPORTANT: The token issuer public key was not supplied. Add the real G... issuer
+# under [[CURRENCIES]] below before treating this metadata as a live token listing.
+# Uncomment that section and choose exactly one supply-policy field that matches
+# the actual token (fixed_number, max_number, or is_unlimited).
+
+VERSION = "2.0.0"
+NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
+
+[DOCUMENTATION]
+ORG_NAME = "Bres"
+ORG_DBA = "Bres"
+ORG_URL = "https://bresxlm.pages.dev"
+ORG_LOGO = "https://bresxlm.pages.dev/bres-token.png"
+ORG_DESCRIPTION = "Bres is an independent digital asset project built on the Stellar network. Its identity is rooted in open access, fast-moving ideas, and a forward-looking digital community. The Bres website provides project information and links to the token's verified Stellar resources."
+
+# Uncomment and complete only after confirming the issuer address and token settings.
+# [[CURRENCIES]]
+# code = "BRES"
+# issuer = "G..." # Replace with the real Stellar issuer public key.
+# name = "Bres"
+# desc = "BRES is a digital asset on the Stellar network — open by nature, forward by design. A new signal for a world that never stands still."
+# image = "https://bresxlm.pages.dev/bres-token.png"
+# display_decimals = 7
+# status = "live"
+# is_unlimited = true # Replace with the actual supply model; do not assume this value.
