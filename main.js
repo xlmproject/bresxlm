@@ -15,7 +15,7 @@ if (/^https:\/\//i.test(configuredTradeUrl)) {
   tradeButton.rel = 'noopener noreferrer';
   tradeButton.removeAttribute('aria-disabled');
 } else {
-  tradeButton.href = '#trade';
+  tradeButton.href = 'https://stellarterm.com/exchange/BRES-GDQBWYJAFNMXY7MQKOV2SB2GY3GJKFSWI2OH2O3EAXNYP6KZNVVAWQQQ/XLM-native';
   tradeButton.setAttribute('aria-disabled', 'true');
   tradeButton.addEventListener('click', (event) => {
     event.preventDefault();
