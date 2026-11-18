@@ -7,23 +7,6 @@ const toast = document.querySelector('#toast');
 const tradeButton = document.querySelector('#trade-button');
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-// Trading links must be real, verified project destinations; none is guessed here.
-const configuredTradeUrl = window.BRES_CONFIG?.tradeUrl?.trim() || '';
-if (/^https:\/\//i.test(configuredTradeUrl)) {
-  tradeButton.href = configuredTradeUrl;
-  tradeButton.target = '_blank';
-  tradeButton.rel = 'noopener noreferrer';
-  tradeButton.removeAttribute('aria-disabled');
-} else {
-  tradeButton.href = 'https://stellarterm.com/exchange/BRES-GDQBWYJAFNMXY7MQKOV2SB2GY3GJKFSWI2OH2O3EAXNYP6KZNVVAWQQQ/XLM-native';
-  tradeButton.setAttribute('aria-disabled', 'true');
-  tradeButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    toast.textContent = 'Trading destination not configured. Add the verified pair URL in config.js.';
-    toast.classList.add('visible');
-    window.clearTimeout(toast._hideTimer);
-    toast._hideTimer = window.setTimeout(() => toast.classList.remove('visible'), 3600);
-  });
 }
 
 let renderer;
